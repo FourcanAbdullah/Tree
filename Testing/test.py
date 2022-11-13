@@ -29,11 +29,11 @@ def traversingThruRoot(directory, prefix):
         if givenIndex == (length - 1):
             print(prefix+"└───", sortedList[givenIndex])
             if (os.path.isdir(newpath)):
-                traversingThruRoot(newpath, prefix)
+                traversingThruRoot(newpath, prefix + "    ")
         else:
             print(prefix+"├───", sortedList[givenIndex])
             if (os.path.isdir(newpath)):
-                traversingThruRoot(newpath, prefix)
+                traversingThruRoot(newpath, prefix + "│   ")
 
 
 directory = os.getcwd()
